@@ -14,5 +14,5 @@ daydata$Date <- as.Date(daydata$Date,"%d/%m/%Y")
 daydata <- cbind(daydata, "DateTime" = as.POSIXct(paste(daydata$Date, daydata$Time)))
 
 hist(as.numeric(daydata$Global_active_power), col = "Red", main = "Global Active Power", xlab = "Global Active power (kilowatts)", ylab = "Frequency")
-dev.print(png, file = "plot1.png", width = 1024, height = 768)
+dev.print(png, file = "plot1.png", width = 480, height = 480)
 dev.off()
